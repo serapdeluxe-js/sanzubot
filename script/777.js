@@ -1,20 +1,20 @@
 module.exports = {
   config: {
-    name: "accept",
+    name: "777",
     aliases: [],
     version: "1.0.0",
     role: 0,
     hasPrefix: true,
-    description: "Command: accept",
-    usage: "+accept",
+    description: "Command: 777",
+    usage: "+777",
     cooldown: 3
   },
 
   run: async ({ api, event, args }) => {
     const text = args && args.length ? args.join(" ") : "";
     const reply = text
-      ? `✅ +accept received: ${text}`
-      : `✅ +accept is available.`;
+      ? `✅ +777 received: ${text}`
+      : `✅ +777 is available.`;
     return api.sendMessage(reply, event.threadID, event.messageID);
   }
 };

@@ -1,20 +1,20 @@
 module.exports = {
   config: {
-    name: "accept",
+    name: "autoreset",
     aliases: [],
     version: "1.0.0",
     role: 0,
     hasPrefix: true,
-    description: "Command: accept",
-    usage: "+accept",
+    description: "Command: autoreset",
+    usage: "+autoreset",
     cooldown: 3
   },
 
   run: async ({ api, event, args }) => {
     const text = args && args.length ? args.join(" ") : "";
     const reply = text
-      ? `✅ +accept received: ${text}`
-      : `✅ +accept is available.`;
+      ? `✅ +autoreset received: ${text}`
+      : `✅ +autoreset is available.`;
     return api.sendMessage(reply, event.threadID, event.messageID);
   }
 };

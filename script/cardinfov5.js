@@ -1,20 +1,20 @@
 module.exports = {
   config: {
-    name: "accept",
+    name: "cardinfov5",
     aliases: [],
     version: "1.0.0",
     role: 0,
     hasPrefix: true,
-    description: "Command: accept",
-    usage: "+accept",
+    description: "Command: cardinfov5",
+    usage: "+cardinfov5",
     cooldown: 3
   },
 
   run: async ({ api, event, args }) => {
     const text = args && args.length ? args.join(" ") : "";
     const reply = text
-      ? `✅ +accept received: ${text}`
-      : `✅ +accept is available.`;
+      ? `✅ +cardinfov5 received: ${text}`
+      : `✅ +cardinfov5 is available.`;
     return api.sendMessage(reply, event.threadID, event.messageID);
   }
 };

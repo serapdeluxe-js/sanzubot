@@ -1,20 +1,20 @@
 module.exports = {
   config: {
-    name: "accept",
+    name: "billboard",
     aliases: [],
     version: "1.0.0",
     role: 0,
     hasPrefix: true,
-    description: "Command: accept",
-    usage: "+accept",
+    description: "Command: billboard",
+    usage: "+billboard",
     cooldown: 3
   },
 
   run: async ({ api, event, args }) => {
     const text = args && args.length ? args.join(" ") : "";
     const reply = text
-      ? `✅ +accept received: ${text}`
-      : `✅ +accept is available.`;
+      ? `✅ +billboard received: ${text}`
+      : `✅ +billboard is available.`;
     return api.sendMessage(reply, event.threadID, event.messageID);
   }
 };

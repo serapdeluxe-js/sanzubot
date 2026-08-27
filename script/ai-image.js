@@ -1,20 +1,20 @@
 module.exports = {
   config: {
-    name: "accept",
+    name: "ai-image",
     aliases: [],
     version: "1.0.0",
     role: 0,
     hasPrefix: true,
-    description: "Command: accept",
-    usage: "+accept",
+    description: "Command: ai-image",
+    usage: "+ai-image",
     cooldown: 3
   },
 
   run: async ({ api, event, args }) => {
     const text = args && args.length ? args.join(" ") : "";
     const reply = text
-      ? `✅ +accept received: ${text}`
-      : `✅ +accept is available.`;
+      ? `✅ +ai-image received: ${text}`
+      : `✅ +ai-image is available.`;
     return api.sendMessage(reply, event.threadID, event.messageID);
   }
 };

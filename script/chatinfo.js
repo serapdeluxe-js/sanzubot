@@ -1,20 +1,20 @@
 module.exports = {
   config: {
-    name: "accept",
+    name: "chatinfo",
     aliases: [],
     version: "1.0.0",
     role: 0,
     hasPrefix: true,
-    description: "Command: accept",
-    usage: "+accept",
+    description: "Command: chatinfo",
+    usage: "+chatinfo",
     cooldown: 3
   },
 
   run: async ({ api, event, args }) => {
     const text = args && args.length ? args.join(" ") : "";
     const reply = text
-      ? `✅ +accept received: ${text}`
-      : `✅ +accept is available.`;
+      ? `✅ +chatinfo received: ${text}`
+      : `✅ +chatinfo is available.`;
     return api.sendMessage(reply, event.threadID, event.messageID);
   }
 };

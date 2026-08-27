@@ -1,20 +1,20 @@
 module.exports = {
   config: {
-    name: "accept",
+    name: "avtwibu4",
     aliases: [],
     version: "1.0.0",
     role: 0,
     hasPrefix: true,
-    description: "Command: accept",
-    usage: "+accept",
+    description: "Command: avtwibu4",
+    usage: "+avtwibu4",
     cooldown: 3
   },
 
   run: async ({ api, event, args }) => {
     const text = args && args.length ? args.join(" ") : "";
     const reply = text
-      ? `✅ +accept received: ${text}`
-      : `✅ +accept is available.`;
+      ? `✅ +avtwibu4 received: ${text}`
+      : `✅ +avtwibu4 is available.`;
     return api.sendMessage(reply, event.threadID, event.messageID);
   }
 };
