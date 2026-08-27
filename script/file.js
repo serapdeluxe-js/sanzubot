@@ -1,20 +1,20 @@
 module.exports = {
   config: {
-    name: "help",
+    name: "file",
     aliases: [],
     version: "1.0.0",
     role: 0,
     hasPrefix: true,
-    description: "Command: help",
-    usage: "+help",
+    description: "Command: file",
+    usage: "+file",
     cooldown: 3
   },
 
   run: async ({ api, event, args }) => {
     const text = args && args.length ? args.join(" ") : "";
     const reply = text
-      ? `✅ +help received: ${text}`
-      : `✅ +help is available.`;
+      ? `✅ +file received: ${text}`
+      : `✅ +file is available.`;
     return api.sendMessage(reply, event.threadID, event.messageID);
   }
 };

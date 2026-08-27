@@ -1,20 +1,20 @@
 module.exports = {
   config: {
-    name: "help",
+    name: "luckydraw",
     aliases: [],
     version: "1.0.0",
     role: 0,
     hasPrefix: true,
-    description: "Command: help",
-    usage: "+help",
+    description: "Command: luckydraw",
+    usage: "+luckydraw",
     cooldown: 3
   },
 
   run: async ({ api, event, args }) => {
     const text = args && args.length ? args.join(" ") : "";
     const reply = text
-      ? `✅ +help received: ${text}`
-      : `✅ +help is available.`;
+      ? `✅ +luckydraw received: ${text}`
+      : `✅ +luckydraw is available.`;
     return api.sendMessage(reply, event.threadID, event.messageID);
   }
 };

@@ -1,20 +1,20 @@
 module.exports = {
   config: {
-    name: "help",
+    name: "iss",
     aliases: [],
     version: "1.0.0",
     role: 0,
     hasPrefix: true,
-    description: "Command: help",
-    usage: "+help",
+    description: "Command: iss",
+    usage: "+iss",
     cooldown: 3
   },
 
   run: async ({ api, event, args }) => {
     const text = args && args.length ? args.join(" ") : "";
     const reply = text
-      ? `✅ +help received: ${text}`
-      : `✅ +help is available.`;
+      ? `✅ +iss received: ${text}`
+      : `✅ +iss is available.`;
     return api.sendMessage(reply, event.threadID, event.messageID);
   }
 };

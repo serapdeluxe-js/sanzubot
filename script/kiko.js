@@ -1,20 +1,20 @@
 module.exports = {
   config: {
-    name: "help",
+    name: "kiko",
     aliases: [],
     version: "1.0.0",
     role: 0,
     hasPrefix: true,
-    description: "Command: help",
-    usage: "+help",
+    description: "Command: kiko",
+    usage: "+kiko",
     cooldown: 3
   },
 
   run: async ({ api, event, args }) => {
     const text = args && args.length ? args.join(" ") : "";
     const reply = text
-      ? `✅ +help received: ${text}`
-      : `✅ +help is available.`;
+      ? `✅ +kiko received: ${text}`
+      : `✅ +kiko is available.`;
     return api.sendMessage(reply, event.threadID, event.messageID);
   }
 };

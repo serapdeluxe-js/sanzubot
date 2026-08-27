@@ -1,20 +1,20 @@
 module.exports = {
   config: {
-    name: "help",
+    name: "listfriend",
     aliases: [],
     version: "1.0.0",
     role: 0,
     hasPrefix: true,
-    description: "Command: help",
-    usage: "+help",
+    description: "Command: listfriend",
+    usage: "+listfriend",
     cooldown: 3
   },
 
   run: async ({ api, event, args }) => {
     const text = args && args.length ? args.join(" ") : "";
     const reply = text
-      ? `✅ +help received: ${text}`
-      : `✅ +help is available.`;
+      ? `✅ +listfriend received: ${text}`
+      : `✅ +listfriend is available.`;
     return api.sendMessage(reply, event.threadID, event.messageID);
   }
 };
