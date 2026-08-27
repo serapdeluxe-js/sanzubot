@@ -1,20 +1,20 @@
 module.exports = {
   config: {
-    name: "unsend",
+    name: "shortlink",
     aliases: [],
     version: "1.0.0",
     role: 0,
     hasPrefix: true,
-    description: "Command: unsend",
-    usage: "+unsend",
+    description: "Command: shortlink",
+    usage: "+shortlink",
     cooldown: 3
   },
 
   run: async ({ api, event, args }) => {
     const text = args && args.length ? args.join(" ") : "";
     const reply = text
-      ? `✅ +unsend received: ${text}`
-      : `✅ +unsend is available.`;
+      ? `✅ +shortlink received: ${text}`
+      : `✅ +shortlink is available.`;
     return api.sendMessage(reply, event.threadID, event.messageID);
   }
 };

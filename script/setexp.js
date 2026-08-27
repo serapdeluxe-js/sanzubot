@@ -1,20 +1,20 @@
 module.exports = {
   config: {
-    name: "unsend",
+    name: "setexp",
     aliases: [],
     version: "1.0.0",
     role: 0,
     hasPrefix: true,
-    description: "Command: unsend",
-    usage: "+unsend",
+    description: "Command: setexp",
+    usage: "+setexp",
     cooldown: 3
   },
 
   run: async ({ api, event, args }) => {
     const text = args && args.length ? args.join(" ") : "";
     const reply = text
-      ? `✅ +unsend received: ${text}`
-      : `✅ +unsend is available.`;
+      ? `✅ +setexp received: ${text}`
+      : `✅ +setexp is available.`;
     return api.sendMessage(reply, event.threadID, event.messageID);
   }
 };

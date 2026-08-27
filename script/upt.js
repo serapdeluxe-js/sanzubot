@@ -1,20 +1,20 @@
 module.exports = {
   config: {
-    name: "unsend",
+    name: "upt",
     aliases: [],
     version: "1.0.0",
     role: 0,
     hasPrefix: true,
-    description: "Command: unsend",
-    usage: "+unsend",
+    description: "Command: upt",
+    usage: "+upt",
     cooldown: 3
   },
 
   run: async ({ api, event, args }) => {
     const text = args && args.length ? args.join(" ") : "";
     const reply = text
-      ? `✅ +unsend received: ${text}`
-      : `✅ +unsend is available.`;
+      ? `✅ +upt received: ${text}`
+      : `✅ +upt is available.`;
     return api.sendMessage(reply, event.threadID, event.messageID);
   }
 };
