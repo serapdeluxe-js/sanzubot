@@ -12,8 +12,8 @@ const SOURCES = {
 
 module.exports = {
 	config: {
-		name: "coveranime",
-		aliases: ["animepfp", "pfpanime"],
+		name: "animecard",
+		aliases: ["acover", "pfpcard"],
 		version: "1.0",
 		author: "Claude",
 		countDown: 5,
