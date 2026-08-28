@@ -5,8 +5,8 @@ const path = require("path");
 
 module.exports = {
 	config: {
-		name: "top",
-		aliases: ["leaderboard", "toplevel"],
+		name: "lvltop",
+		aliases: ["ranklist", "leaders"],
 		version: "1.0",
 		author: "Claude",
 		countDown: 5,
